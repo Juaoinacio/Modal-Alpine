@@ -1,0 +1,30 @@
+<div>
+    <div class="flex justify-between mb-4">
+        <h3 class="text-lg font-bold">Detalhes Bilhete</h3>
+        <button @click="openModal2 = false"
+                class="p-2 bg-gray-300 rounded hover:bg-gray-400"
+            >
+            Fechar Modal 2
+        </button>
+    </div>
+    <h3 class="text-xl font-bold mb-4">Modal 2 - Conteúdo Diferente</h3>
+
+    <p class="mb-4">Este é um modal dentro de outro modal! 👀</p>
+
+    <div class="bg-green-50 p-4 rounded border border-green-200">
+        <p class="text-sm text-gray-700 font-bold">Conteúdo exclusivo do Modal 2:</p>
+        <ul class="list-disc list-inside mt-2">
+            <li>Formulários específicos</li>
+            <li>Tabelas de dados secundários</li>
+            <li>Confirmações de ações</li>
+            <li>Detalhes adicionais</li>
+        </ul>
+    </div>
+
+    <div class="mt-4 bg-yellow-50 p-3 rounded">
+        <p class="text-xs text-gray-600">
+            <strong>Dica:</strong> Este modal está sobreposto ao primeiro modal.
+            Você pode ter quantos níveis precisar ajustando o z-index.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} | Teste Modal </title>
+
+        <!-- João inacio -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+        <!-- Alpine.js (unica instancia - versao CDN estavel 3.x) -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+
+        <!-- HTMX -->
+        <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+
+        {% block head %}{% endblock %}
+    </head>
+
+    <body class="bg-gray-200 text-gray-900 h-screen flex flex-col overflow-hidden">
+        <!-- Container principal: sidebar fixa + area de conteudo -->
+        <div class="flex flex-1 overflow-hidden relative">
+            <!-- Area de conteudo — margem controlada pelo CSS via data-sidebar no <html> -->
+            <div id="content" class="flex-1 flex flex-col transition-all duration-300 min-w-0 overflow-hidden">
+                <!-- Conteudo principal rolavel -->
+                <main class="flex-1 overflow-y-auto overflow-x-hidden scrollbar-custom">
+                    {% block content %}{% endblock %}
+                </main>
+
+            </div>
+        </div>
+    </body>
+</html>
