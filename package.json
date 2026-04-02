@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "copy-highcharts": "powershell Copy-Item node_modules/highcharts/highcharts.js static/javascript/highcharts/"
+  },
+
+  "dependencies": {
+    "highcharts": "^12.5.0"
+  }
+}

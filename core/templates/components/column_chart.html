@@ -1,0 +1,9 @@
+<script>
+    createColumnChart({
+        renderTo: "{{ data.renderTo }}",
+        type: "{{ data.type }}",
+        title: "{{ data.title }}",
+        categories: {{ data.categories|safe }},
+        series: {{ data.serie|safe }}
+    });
+</script>

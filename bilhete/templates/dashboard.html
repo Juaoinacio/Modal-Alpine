@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+
+
+
 {% block content %}
 
     <div class="p-6">
@@ -36,7 +41,19 @@
                 </div>
             </div>
         </div>
+
+        <div id="grafico-coluna"
+             hx-get="{% url 'grafico_venda_bilhete' %}"
+             hx-trigger="load, every 10s"
+             hx-swap="innerHTML">
+        </div>
     </div>
+
+    <script src="{% static 'javascript/highcharts/highcharts.js' %}"></script>
+    <script src="{% static 'javascript/highcharts/accessibility.js' %}"></script>
+    <script src="{% static 'javascript/charts/columnChart.js' %}"></script>
+
+
 
 
 {% endblock %}
