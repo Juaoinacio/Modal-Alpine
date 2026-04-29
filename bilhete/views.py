@@ -1,7 +1,4 @@
-from django.http import JsonResponse
 from django.shortcuts import render
-from django.template.loader import render_to_string
-
 
 def dashboard(request):
     return render(request, 'dashboard.html')
