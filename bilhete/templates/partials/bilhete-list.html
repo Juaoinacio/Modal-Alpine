@@ -1,0 +1,13 @@
+{% if bilhetes %}
+    <ul>
+    {% for bilhete in bilhetes %}
+        <li> {{ bilhete }} </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Sem bilhetes cadastrados</p>
+{% endif %}
+
+<section id="messages">
+    {% include "components/toast.html" %}
+</section>
